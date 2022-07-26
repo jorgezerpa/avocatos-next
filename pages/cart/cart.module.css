@@ -1,0 +1,145 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  position: relative;
+  width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.card:hover {
+  transform: scale(0.98);
+}
+@media (min-width: 1100px) {
+  .card {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+}
+
+.cardMedia {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+.cardMedia img {
+  min-width: 100%;
+  min-height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cardContent {
+  padding: 0.4rem 0.8rem;
+}
+.cardTitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+.cardTitle::before {
+  content: ' ';
+  position: absolute;
+  transition: 0.5s all;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(45deg, hsl(81, 95%, 30%), hsl(81, 95%, 40%));
+}
+.cardTitle:hover::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(45deg, hsl(81, 95%, 30%), hsl(81, 95%, 40%));
+}
+.cardPrice {
+  font-size: 0.8rem;
+  margin: 0.1rem 0 1rem 0;
+}
+
+.cardDescription {
+  position: relative;
+  font-size: 0.7rem;
+  font-style: italic;
+  letter-spacing: 0.1px;
+  line-height: 1rem;
+  max-height: 3rem;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.cardDescription::after {
+  content: '...';
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1rem;
+  width: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 1)
+  );
+}
+.cardActions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.buyButtonContainer {
+  display: flex;
+  padding: 2rem 0.5rem;
+  justify-content: center;
+}
+.buyButton {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(45deg, hsl(81, 95%, 30%), hsl(81, 95%, 40%));
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s all;
+}
+.buyButton:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  transform: scale(0.98);
+}
+
+.empty {
+  min-height: 70vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty h2 {
+  font-size: 2rem;
+}
+.empty p {
+  font-size: 1.3rem;
+}
